@@ -1,0 +1,93 @@
+:root {
+  --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: calc(62.5% + 0.4vw);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--system-ui);
+  display: flex;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font-family: inherit;
+  font-size: 100%;
+  width: 150px;
+}
+
+#background-sidebar {
+  position: relative;
+  height: 100vh;
+  width: 40vw;
+  background: url(img/galata-tower.jpg) center/cover;
+}
+
+#header-sidebar {
+  position: absolute;
+  top: 88vh;
+  right: 17vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 700;
+}
+
+#header-slogan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.bounce {
+  animation-name: bounce;
+  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0%   { transform: scale(1,1)      translateY(0); }
+  10%  { transform: scale(1.1,.9)   translateY(0); }
+  30%  { transform: scale(1,1)     translateY(-10px); }
+  50%  { transform: scale(1.05,1)   translateY(0); }
+  57%  { transform: scale(1,1)      translateY(-2px); }
+  64%  { transform: scale(1,1)      translateY(0); }
+  100% { transform: scale(1,1)      translateY(0); }
+}
+
+main {
+  width: 60vw;
+}
+
+#header-sidebar > img {
+  height: 75px;
+}
+
+form {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+
+.form-element {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-cont {
+  margin-bottom: 30px;
+}
