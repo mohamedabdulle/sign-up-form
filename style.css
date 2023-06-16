@@ -1,6 +1,9 @@
 :root {
   --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: calc(62.5% + 0.4vw);
+  font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+  --default-spacing: 2rem;
+  --half-spacing: 1rem;
+  font-weight: 700;
 }
 
 * {
@@ -13,24 +16,24 @@ body {
   font-family: var(--system-ui);
   display: flex;
   min-height: 100vh;
+  line-height: 1.5;
 }
 
 button,
 input {
   font-family: inherit;
   font-size: 100%;
-  border-radius: 4px;;
+  border-radius: 4px;
 }
 
 #background-sidebar {
-  position: relative;
   width: 40vw;
   background: url(img/galata-tower.jpg) center/cover;
 }
 
 #header-sidebar {
   position: relative;
-  top: calc(46rem + 10vh);
+  top: 88%;
   right: 1vw;
   display: flex;
   justify-content: center;
@@ -38,7 +41,6 @@ input {
   gap: 10px;
   font-size: 1.2rem;
   color: white;
-  font-weight: 700;
 }
 
 #header-slogan {
@@ -69,6 +71,10 @@ input {
 main {
   width: 60vw;
   background: rgb(249, 250, 251);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
 }
 
 #header-sidebar > img {
@@ -78,43 +84,77 @@ main {
 .form-element {
   display: flex;
   flex-direction: column;
-  flex: 1 1 auto;
+  min-width: 10rem;
+  width: 25rem;
 }
 
 .form-element input {
-  /* flex: 1 1 auto; */
+ padding: 0.25rem 0.5rem;
+ flex: 1 1 auto;
 
 }
 
-#form-left,
-#form-right {
+#form-element-row {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 20rem;
+  gap: var(--half-spacing);
+  flex-wrap: wrap;
+}
+
+main > div {
+  width: 100%;
 }
 
 #form-cont {
   background: rgb(255, 255, 255);
   box-shadow: 3px 3px 10px black;
-  padding: 1rem;
+  padding: var(--default-spacing);
   border-radius: 5px;
 }
 
 #form-cont h2 {
-  margin-left: 1rem;
+  margin-bottom: var(--default-spacing);
+  line-height: 0.6;
 }
 
   #form-element-cont {
   display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: 40px;
-  margin: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: var(--half-spacing);
 }
 
 a {
   text-decoration: none;
+}
+
+#apply {
+  margin: var(--default-spacing);
+  padding: var(--half-spacing) 4rem;
   font-weight: 700;
-  color: rgb(122, 161, 211);
+}
+
+#login-message {
+  margin-left: var(--default-spacing);
+}
+
+@media only screen and (max-width: 610px) {
+  body {
+    flex-direction: column;
+    font-size: 1.2rem;
+  }
+
+  #background-sidebar {
+    width: 100%;
+    min-height: 15vh;
+    flex: 1 1 auto;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  #header-sidebar {
+    top: 85%;
+  }
 }

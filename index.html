@@ -23,43 +23,48 @@
     <hgroup>
       <h1></h1>
     </hgroup>
-    <form action="" method="post">
-      <div id="form-cont">
-        <h2>Lets Get Started!</h2>
-        <div id="form-element-cont">
-          <div id="form-left">
-            <div class="form-element">
-              <label for="first-name">First Name: <span></span></label>
-              <input type="text" name="" id="first-name" required>
+    <div>
+      <form action="" method="post">
+        <div id="form-cont">
+          <h2>Lets Get Started!</h2>
+          <div id="form-element-cont">
+            <div id="form-element-row">
+              <div class="form-element">
+                <label for="first-name">First Name:<span></span></label>
+                <input type="text" name="" id="first-name" required>
+              </div>
+              <div class="form-element">
+                <label for="last-name">Last Name: <span></span></label>
+                <input type="text" name="" id="last-name" required>
+              </div>
             </div>
-            <div class="form-element">
-              <label for="email">Email:</label>
-              <input type="email" name="" id="email" required>
+            <div id="form-element-row">
+              <div class="form-element">
+                <label for="email">Email:</label>
+                <input type="email" name="" id="email" required>
+              </div>
+              <div class="form-element">
+                <label for="telephone">Telephone:</label>
+                <input type="tel" name="" id="telephone" required>
+              </div>
             </div>
-            <div class="form-element">
-              <label for="password">Password: </label>
-              <input type="password" name="" id="password">
-            </div>
-          </div>
-          <div id="form-right">
-            <div class="form-element">
-              <label for="last-name">Last Name: <span></span></label>
-              <input type="text" name="" id="last-name" required>
-            </div>
-            <div class="form-element">
-              <label for="telephone">Telephone:</label>
-              <input type="tel" name="" id="telephone" required>
-            </div>
-            <div class="form-element">
-              <label for="confirm-password">Confirm Password:</label>
-              <input type="password" name="" id="confirm-password">
+            <div id="form-element-row">
+              <div class="form-element">
+                <label for="password">Password: </label>
+                <input type="password" name="" id="password">
+              </div>
+              <div class="form-element">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" name="" id="confirm-password">
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <button>Apply Now</button>
+    </div>
+    <button id="apply">Apply Now</button>
     </form>
-    <span>Already have an account? <a href="">Login</a></span>
+    <span id="login-message">Already have an application? <a href="">Login</a></span>
+    </div>
     <footer></footer>
   </main>
 </body>
