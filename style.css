@@ -1,9 +1,10 @@
 :root {
   --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
   --default-spacing: 2rem;
   --half-spacing: 1rem;
-  font-weight: 700;
+  --secondary-color: rgb(237, 28, 36);
+  --text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;
 }
 
 * {
@@ -17,6 +18,8 @@ body {
   display: flex;
   min-height: 100vh;
   line-height: 1.5;
+  color: white;
+  font-weight: 700;
 }
 
 button,
@@ -24,23 +27,24 @@ input {
   font-family: inherit;
   font-size: 100%;
   border-radius: 4px;
+  border-width: 3px;
 }
 
 #background-sidebar {
+  position: relative;
   width: 40vw;
   background: url(img/galata-tower.jpg) center/cover;
 }
 
 #header-sidebar {
-  position: relative;
-  top: 88%;
-  right: 1vw;
+  position: absolute;
+  bottom: 2rem;
+  left: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
   font-size: 1.2rem;
-  color: white;
 }
 
 #header-slogan {
@@ -48,8 +52,7 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-shadow: -2px 0 1px black, 0 2px 1px black, 2px 0 1px black, 0 -2px 1px black;
-}
+  text-shadow: var(--text-shadow);}
 
 .bounce {
   animation-name: bounce;
@@ -61,7 +64,7 @@ input {
 @keyframes bounce {
   0%   { transform: scale(1,1)      translateY(0); }
   10%  { transform: scale(1.1,.9)   translateY(0); }
-  30%  { transform: scale(1,1)     translateY(-10px); }
+  30%  { transform: scale(1,1)      translateY(-10px); }
   50%  { transform: scale(1.05,1)   translateY(0); }
   57%  { transform: scale(1,1)      translateY(-2px); }
   64%  { transform: scale(1,1)      translateY(0); }
@@ -69,12 +72,25 @@ input {
 }
 
 main {
+  position: relative;
   width: 60vw;
-  background: rgb(249, 250, 251);
+  background: rgb(12, 36, 65);
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
+}
+
+hgroup {
+  margin: var(--default-spacing);
+  align-self:flex-end;
+  text-align: right;
+  text-shadow: var(--text-shadow);
+  font-size: 1.5rem;
+}
+
+hgroup h3 {
+  color: var(--secondary-color);
 }
 
 #header-sidebar > img {
@@ -102,6 +118,8 @@ main {
 
 main > div {
   width: 100%;
+  background: rgb(112, 108, 91);
+  color: black;
 }
 
 #form-cont {
@@ -126,16 +144,27 @@ main > div {
 
 a {
   text-decoration: none;
+  text-shadow: var(--text-shadow);
+}
+
+#login-message a {
+  color: var(--secondary-color);
 }
 
 #apply {
   margin: var(--default-spacing);
   padding: var(--half-spacing) 4rem;
   font-weight: 700;
+  background-color: var(--secondary-color);
+  text-shadow: var(--text-shadow);
+  color: white;
+
 }
 
 #login-message {
   margin-left: var(--default-spacing);
+  margin-bottom: 6rem;
+  text-shadow: var(--text-shadow);
 }
 
 @media only screen and (max-width: 610px) {
@@ -146,7 +175,7 @@ a {
 
   #background-sidebar {
     width: 100%;
-    min-height: 15vh;
+    min-height: 100px;
     flex: 1 1 auto;
   }
 
@@ -154,7 +183,35 @@ a {
     width: 100%;
   }
 
-  #header-sidebar {
-    top: 85%;
+  #form-element-row {
+    width: 100%;
   }
+  
+  .form-element {
+    width: 100%;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-shadow: var(--text-shadow);
+  margin-top: 20px;
+  align-self: center;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+
+}
+
+footer img {
+  aspect-ratio: 1/1;
+  width: 20px;
+  border-radius: 5px;
 }
