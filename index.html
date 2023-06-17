@@ -14,7 +14,7 @@
   <div id="background-sidebar">
     <header id="header-sidebar">
       <img src="img/turkey-pin.png" alt="Turkish Flag" class="bounce">
-      <div id="header-slogan">
+      <div id="slogan-sidebar">
         <span>Your Next</span>
         <span>Destination!</span>
       </div>
@@ -26,49 +26,49 @@
       <h3>e-Visa Application Portal</h3>
     </hgroup>
     <div>
-      <form action="" method="post">
+      <form action="#" method="post">
         <div id="form-cont">
           <h2>Lets Get Started!</h2>
           <div id="form-element-cont">
             <div id="form-element-row">
               <div class="form-element">
                 <label for="first-name">First Name *</label>
-                <input type="text" name="" id="first-name" required>
+                <input type="text" name="" id="first-name" autocomplete="given-name" required>
               </div>
               <div class="form-element">
                 <label for="last-name">Last Name *</label>
-                <input type="text" name="" id="last-name" required>
+                <input type="text" name="" id="last-name" autocomplete="family-name" required>
               </div>
             </div>
             <div id="form-element-row">
               <div class="form-element">
                 <label for="email">Email *</label>
-                <input type="email" name="" id="email" required>
+                <input type="email" name="" id="email" autocomplete="email" required>
               </div>
               <div class="form-element">
                 <label for="telephone">Telephone *</label>
-                <input type="tel" name="" id="telephone" required>
+                <input type="tel" name="" id="telephone" autocomplete="tel" required pattern="[0-9]{13}">
               </div>
             </div>
             <div id="form-element-row">
               <div class="form-element">
                 <label for="password">Password *</label>
-                <input type="password" name="" id="password">
+                <input type="password" name="" id="password" autocomplete="new-password" required>
               </div>
               <div class="form-element">
                 <label for="confirm-password">Confirm Password *</label>
-                <input type="password" name="" id="confirm-password">
+                <input type="password" name="" id="confirm-password" autocomplete="new-password" required>
               </div>
             </div>
           </div>
         </div>
-    </div>
-    <button id="apply">Apply Now</button>
-    </form>
-    <span id="login-message">Already have an application? <a href="">Login</a></span>
+        <button id="apply-button" type="submit">Apply Now</button>
+      </form>
+      <span id="login">Already have an application? <a href="">Login</a></span>
     </div>
     <footer>
-      <a href="https://github.com/mohamedabdulle/sign-up-form" target="_blank"><img src="img/github.gif" alt="GitHub Link">Mohamed Abdulle © 2023</a>
+      <a href="https://github.com/mohamedabdulle/sign-up-form" target="_blank"><img src="img/github.gif"
+          alt="GitHub Link">Mohamed Abdulle © 2023</a>
     </footer>
   </main>
 </body>
