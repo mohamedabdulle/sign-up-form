@@ -28,6 +28,6 @@ This project's purpose is to practice certain HTML and CSS concepts:
 
 It features basic form validation:
 
-1. First and last name can only consist of a comma, hyphen, and letters.
+1. First and last name can only consist of a apostrophe, hyphen, and letters.
 2. Telephone can only consist of numbers.
 3. Both passwords must match.
