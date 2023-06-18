@@ -1,7 +1,6 @@
 # Sign-up Form
 
-## Description
-This is a mock sign-up form to apply for a Turkey e-Visa.
+This is a mock sign-up form to apply for a Turkish e-Visa.
 
 ![sign-up form](docs/sign-up%20form.png)
 
