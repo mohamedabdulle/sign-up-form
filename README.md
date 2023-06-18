@@ -2,17 +2,15 @@
 
 ## Description
 This is a mock sign-up form to apply for a Turkey e-Visa.
-<br>
 
 ![sign-up form](docs/sign-up%20form.png)
 
-<br>
 
 ## Info Links
-- [Click here to see the sign-up form](https://github.com/mohamedabdulle/sign-up-form)
+- [Click here to see the sign-up form](https://mohamedabdulle.github.io/sign-up-form/)
 
-- [Link to the Assignment Details](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form)
-<br>
+- [Link to the assignment details](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form)
+
 
 ## Description
 
