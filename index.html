@@ -8,6 +8,20 @@
   <title>e-Visa - Republic of Türkiye</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="img/favicon.png">
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      const confirmPassword = document.getElementById("confirm-password");
+      confirmPassword.addEventListener("input", event => {
+        const password = document.getElementById("password");
+        if (password.value !== confirmPassword.value) {
+          confirmPassword.setCustomValidity("Both passwords must match.")
+          confirmPassword.reportValidity();
+        } else {
+          confirmPassword.setCustomValidity("")
+        }
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -26,7 +40,7 @@
       <h3>e-Visa Application Portal</h3>
     </hgroup>
     <div>
-      <form action="#" method="post">
+      <form>
         <div id="form-cont">
           <h2>Lets Get Started!</h2>
           <div id="form-element-cont">
@@ -47,7 +61,7 @@
               </div>
               <div class="form-element">
                 <label for="telephone">Telephone *</label>
-                <input type="tel" name="" id="telephone" autocomplete="tel" required pattern="[0-9]{13}">
+                <input type="tel" name="" id="telephone" autocomplete="tel" required pattern="[0-9]+">
               </div>
             </div>
             <div id="form-element-row">

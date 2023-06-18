@@ -118,10 +118,13 @@ main>div {
 
 hgroup {
   margin: var(--default-spacing);
+  margin-right: var(--half-spacing);
   align-self: flex-end;
   text-align: right;
   text-shadow: var(--text-shadow);
   font-size: 1.2rem;
+  border-right: 10px solid var(--secondary-color);
+  padding-right: var(--default-spacing);
 }
 
 hgroup h3 {
